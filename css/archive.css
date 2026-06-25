@@ -1,0 +1,244 @@
+        body{
+            margin:0
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar{
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            width: 100vw;
+            z-index: 2000;
+        }
+
+        .button-text{
+            text-decoration: none;
+        }
+
+        .button-pill{
+            background-color: #ffffff;
+            border-style: solid;
+            border-width: 1.9px;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 4px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        .menu-left, .menu-right {
+            padding: 1rem;
+        }
+
+        .game-nav {
+            position: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            left:0px;
+            bottom:0px;
+            width: 100vw;
+            z-index: 2000;        
+        }
+
+        .game-nav-left, .game-nav-right {
+            padding: 1rem;
+        }
+
+        .card{
+            width:50vw;
+            height:100vh;
+            float:left;
+            background-repeat: no-repeat, no-repeat;
+            background-position: center, center;      
+        }
+
+        .card.image-type-text {
+            background-size: auto 100%, cover;
+        }
+
+        .card.image-type-img {
+            background-size: auto 65%, cover;
+        }
+
+        .cards{
+            display: flex;
+            height: 100vh;
+        }
+
+        .book-gutter {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            pointer-events: none;
+            z-index: 1000;
+        }          
+
+        .book-gutter > div {
+            width: 50vw;
+            height: 100vh;
+            box-shadow: 0 0 80px #000;
+        }
+
+
+        .gradient-blue-left {
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #0078BF);
+        }
+
+        .gradient-blue-right {
+            --gradient: linear-gradient(90deg, #0078BF, #ffffff, #ffffff);
+        }
+
+        .gradient-pink-left {
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #FF48B0);
+        }
+
+        .gradient-pink-right {
+            --gradient: linear-gradient(90deg, #FF48B0, #ffffff, #ffffff);
+        }
+
+        .gradient-green-left{
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #00A95C);
+        }
+
+        .gradient-green-right{
+            --gradient: linear-gradient(90deg, #00A95C, #ffffff, #ffffff);
+        }
+
+        .gradient-purple-left{
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #765BA7);
+        }
+
+        .gradient-purple-right{
+            --gradient: linear-gradient(90deg, #765BA7, #ffffff, #ffffff);
+        }
+
+        .gradient-orange-left{
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #FF6C2F);
+        }
+
+        .gradient-orange-right{
+            --gradient: linear-gradient(90deg, #FF6C2F, #ffffff, #ffffff);
+        }    
+
+        .gradient-red-left{
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #FF665E);
+        }
+
+        .gradient-red-right{
+            --gradient: linear-gradient(90deg, #FF665E, #ffffff, #ffffff);
+        }
+
+        .gradient-mint-left{
+            --gradient: linear-gradient(90deg, #ffffff, #ffffff, #82D8D5);
+        }
+
+        .gradient-mint-right{
+            --gradient: linear-gradient(90deg, #82D8D5, #ffffff, #ffffff);
+        }
+
+        .wdym-popup {
+            display: none;
+            position: fixed;
+            width: 20vw;
+            height: auto;
+            overflow-wrap: break-word;
+            white-space: normal; 
+            right: 1rem;
+            border-radius: 24px;
+            z-index: 3000;
+            bottom: 80px;
+            background: white;
+            border: 1.9px solid black; 
+            padding: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .wdym-popup.open {
+            display: block;
+        }
+
+        #about-popup {
+            top: 3.5rem;
+            bottom: auto;
+            right: 1rem;
+            width: 40vw;
+        }
+
+        .h1, .h2 {
+            font-family: helvetica;
+            font-weight: bold;
+
+        }
+
+        #index-list {
+            padding: 16rem 20px 0 20px;
+            font-family: Arial, Helvetica, sans-serif;       
+        }
+
+        .index-row {
+        display: grid;
+        grid-template-columns: 0.6fr 0.8fr 1.7fr 1.7fr 1.7fr;
+        border-bottom: 1px solid black;
+        column-gap:1rem;
+        }
+
+        .index-row:not(.index-header):hover {
+        color: var(--row-hover-color);
+        }
+
+        .index-cell {
+        padding: 2px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.15;
+        }
+
+        .index-header {
+        border-bottom: 1px solid black;
+        }
+
+        .index-header .index-cell {
+        font-weight: normal;
+        }
+
+        .index-detail {
+        display: none;
+        grid-column: 1 / -1;
+        padding: 1rem 0;
+        grid-template-columns: 0.6fr 0.8fr 1.7fr 1.7fr 1.7fr;
+        column-gap: 1rem;
+        align-items: start;
+        }
+
+        .index-row.open .index-detail {
+        display: grid;
+        }
+
+        .index-detail-info {
+        grid-column: 4 / 5;
+        grid-row: 1;
+        }
+
+        .index-detail-img {
+        grid-column: 3 / 4;
+        grid-row: 1;
+        width: 90%;
+        height: auto;
+        display: block;  
+        align-self: start;   
+        }
+
+        .index-footer {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: .7rem;
+        padding: 4rem 20px 1rem 20px;        
+    }
